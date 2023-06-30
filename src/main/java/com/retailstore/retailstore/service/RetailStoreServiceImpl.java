@@ -25,7 +25,7 @@ public class RetailStoreServiceImpl implements RetailStoreService {
         if (userOptional.isPresent()) {
             RetailStoreDao user = userOptional.get();
             Double tempDiscount = 0.0;
-
+            //if customer bought a phone, the percentage based discounts cant be applied
             if (user.getCardType() != null && Boolean.FALSE.equals(isBoughtPhone)) {
                 if (user.getCardType().equals("Gold")) {
                     tempDiscount = 0.3;
@@ -38,10 +38,10 @@ public class RetailStoreServiceImpl implements RetailStoreService {
                 }
             }
 
-            // Calculate the total amount of discount
+            //calculate the total amount of discount
             Double discount = tempDiscount * bill + (int) (bill / 200) * 5;
 
-            // Return the net payable amount
+            //return the net payable amount
             return bill - discount;
         } else {
             throw new NoSuchElementException("User not found");
