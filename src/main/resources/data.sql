@@ -18,4 +18,5 @@ INSERT INTO user_user (id, card_type, is_affiliate, membership_years) VALUES
   ('RWG27GXE6EB','Gold',1,5),
   ('EVC81QXS5TH','Silver',1,7),
   ('IPV73JBT1UJ','Silver',1,9),
-  ('XQR68BHG1EW','Silver',1,8);
+  ('XQR68BHG1EW','Silver',1,8),
+  ('PQR24BTY1EW','',1,8);
