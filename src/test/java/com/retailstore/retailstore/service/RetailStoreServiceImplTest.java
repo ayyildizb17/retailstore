@@ -75,7 +75,7 @@ public class RetailStoreServiceImplTest {
 
     
     @Test
-    void calculateNetPayableAmount_succeed_affiliate() {
+    void calculateNetPayableAmount_succeed_isAffiliate() {
 
         //mocking the data
         RetailStoreDao retailStoreDao = new RetailStoreDao();
@@ -97,8 +97,9 @@ public class RetailStoreServiceImplTest {
 
     }
 
+
     @Test
-    void calculateNetPayableAmount_succeed_member() {
+    void calculateNetPayableAmount_succeed_membershipYearsOver2() {
 
         //mocking the data
         RetailStoreDao retailStoreDao = new RetailStoreDao();
